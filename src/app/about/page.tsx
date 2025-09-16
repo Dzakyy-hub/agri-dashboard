@@ -293,26 +293,9 @@ const AboutPage = () => {
                                 <h5 className="text-2xl font-bold text-gray-800 mb-2">Q3-Q4:</h5>
                                 <p className="text-xl text-gray-700">{selectedMilestone?.q3}</p>
                             </div>
-                            {/* Gambar di bawah deskripsi milestone */}
-                            {selectedMilestone?.images && selectedMilestone.images.length > 0 && (
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                                    {selectedMilestone.images.map((image, index) => (
-                                        <div key={index} className="relative w-full aspect-video rounded-xl overflow-hidden shadow-md">
-                                            <Image 
-                                                src={image} 
-                                                alt={`Milestone ${selectedYear} Image ${index + 1}`} 
-                                                width={400} 
-                                                height={225} 
-                                                className="absolute inset-0 w-full h-full object-cover" 
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
                         </div>
                     </div>
                 </div>
-
             </div>
 
             {/* Footer Navigation */}
