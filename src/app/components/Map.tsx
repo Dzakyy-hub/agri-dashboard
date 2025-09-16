@@ -12,7 +12,7 @@ const icon = L.icon({
   iconAnchor: [12, 41],
 });
 
-const MapComponent = ({ lat, lng, popupText }) => {
+const MapComponent = ({ lat, lng, popupText }: { lat: number; lng: number; popupText: string }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       L.Icon.Default.mergeOptions({

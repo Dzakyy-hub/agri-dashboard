@@ -258,7 +258,7 @@ const AboutPage = () => {
                                 <h5 className="text-2xl font-bold text-gray-900">Muhammad Ikbal</h5>
                                 <p className="text-lg text-green-600 font-semibold">CMO</p>
                                 <p className="mt-2 text-md text-gray-600">
-                                    Bronze Medal at PIMNAS 37, "Karsa Cipta" Category from Kemendikbudristek.
+                                    Bronze Medal at PIMNAS 37, &quot;Karsa Cipta&quot; Category from Kemendikbudristek.
                                 </p>
                             </div>
                         </div>

@@ -4,8 +4,12 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { HomeIcon, ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid';
 
-const DashboardLayout = ({ children }) => {
-  const [user, setUser] = useState(null);
+interface User {
+  name: string;
+}
+
+const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+  const [user, setUser] = useState<User | null>(null);
   const [currentDateTime, setCurrentDateTime] = useState('');
 
   useEffect(() => {
@@ -16,7 +20,7 @@ const DashboardLayout = ({ children }) => {
 
     const updateDateTime = () => {
       const now = new Date();
-      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const options: Intl.DateTimeFormatOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
       setCurrentDateTime(now.toLocaleDateString('id-ID', options));
     };
 

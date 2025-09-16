@@ -10,7 +10,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-const SimpleLayout = ({ children }) => {
+const SimpleLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       <header className="py-4 px-8 flex justify-between items-center bg-white shadow-md sticky top-0 z-50">
