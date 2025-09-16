@@ -76,4 +76,14 @@ const SimpleLayout = ({ children }) => {
         </a>
         <a 
             href="mailto:info@agrisync.com" // Ganti dengan alamat email Anda
-            className="flex items-center justify
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700 hover:bg-gray-800 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
+            aria-label="Email"
+        >
+            <FontAwesomeIcon icon={faEnvelope} size="lg" />
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default SimpleLayout;
