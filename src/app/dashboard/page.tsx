@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const DashboardPage = () => {
   return (
@@ -8,7 +9,7 @@ const DashboardPage = () => {
       {/* Sidebar Navigasi */}
       <aside className="w-64 bg-gray-800 text-white p-6 space-y-6">
         <div className="flex items-center space-x-2">
-            <img src="/agrisync-logo-light.png" alt="AgriSync Logo" className="h-8 w-auto" />
+            <Image src="/agrisync-logo-light.png" alt="AgriSync Logo" width={32} height={32} className="h-8 w-auto" />
             <span className="font-bold text-lg">AgriSync <span className="text-sm font-normal text-gray-400 block">Member of ZTS</span></span>
         </div>
         <nav className="space-y-2">
@@ -63,7 +64,7 @@ const DashboardPage = () => {
         <div className="mb-8">
             <h4 className="text-2xl font-bold text-gray-800 mb-4">Peta Lokasi</h4>
             <div className="bg-white p-4 rounded-xl shadow-md">
-                <img src="/map-placeholder.jpg" alt="Peta Lokasi" className="w-full h-96 object-cover rounded-lg" />
+                <Image src="/map-placeholder.jpg" alt="Peta Lokasi" width={800} height={400} className="w-full h-96 object-cover rounded-lg" />
             </div>
         </div>
 

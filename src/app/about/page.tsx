@@ -3,6 +3,7 @@
 import SimpleLayout from '@/app/components/SimpleLayout';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faInstagram,
@@ -54,31 +55,31 @@ const milestonesData = [
         year: '2024', 
         q1: 'Q1-Q2: Continuation of PKM program, refinement of prototype.', 
         q3: 'Q3-Q4: Foundation for MVP, preparation for external funding.',
-        
+    
     },
     { 
         year: '2025', 
         q1: 'Q1-Q2: Join Pertamina Seed & Scale, acceleration program begins.', 
         q3: 'Q3-Q4: Product standardization, collaboration with industrial partners, strengthening branding.',
-
+    
     },
     { 
         year: '2026', 
         q1: 'Q1-Q2: Expansion into regional markets.', 
         q3: 'Q3-Q4: Partnerships with government and private sector.',
-       
+    
     },
     { 
         year: '2027', 
         q1: 'Q1-Q2: Scaling up towards sustainability.', 
         q3: 'Q3-Q4: Integration with national climate-smart agriculture programs.',
-      
+    
     },
     { 
         year: '2028', 
         q1: 'Q1-Q2: Product and service diversification based on AI-HortiScape (carbon monitoring, green certification tools).', 
         q3: 'Q3-Q4: Global expansion and integration into the international carbon trading market.',
-   
+    
     }
 ];
 
@@ -124,7 +125,7 @@ const AboutPage = () => {
                     <div className="relative w-full overflow-hidden rounded-xl shadow-lg" style={{ paddingTop: '56.25%' }}>
                         <iframe
                             className="absolute top-0 left-0 w-full h-full"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" // GANTI DENGAN URL VIDEO YOUTUBE ANDA
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -149,7 +150,7 @@ const AboutPage = () => {
                             </p>
                         </div>
                         <div className="md:order-1">
-                            <img src="/documentation-team.jpg" alt="AgriSync Team Documentation" className="w-full h-auto rounded-xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-500" />
+                            <Image src="/documentation-team.jpg" alt="AgriSync Team Documentation" width={700} height={400} className="w-full h-auto rounded-xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-500" />
                         </div>
                     </div>
                 </div>
@@ -191,19 +192,19 @@ const AboutPage = () => {
                             <h5 className="text-2xl font-bold text-gray-800 mb-4">Contributing to Sustainable Development Goals (SDGs)</h5>
                             <ul className="space-y-4 text-left">
                                 <li className="flex items-center space-x-3 text-xl text-gray-700">
-                                    <img src="/sdg-8.png" alt="SDG 8" className="h-10 w-10" />
+                                    <Image src="/sdg-8.png" alt="SDG 8" width={40} height={40} className="h-10 w-10" />
                                     <span>SDG #8: Decent Work and Economic Growth. Our platform provides knowledge for farmers, enabling decent work.</span>
                                 </li>
                                 <li className="flex items-center space-x-3 text-xl text-gray-700">
-                                    <img src="/sdg-9.png" alt="SDG 9" className="h-10 w-10" />
+                                    <Image src="/sdg-9.png" alt="SDG 9" width={40} height={40} className="h-10 w-10" />
                                     <span>SDG #9: Industry, Innovation, and Infrastructure. We encourage innovation in agriculture with our drone technology.</span>
                                 </li>
                                 <li className="flex items-center space-x-3 text-xl text-gray-700">
-                                    <img src="/sdg-12.png" alt="SDG 12" className="h-10 w-10" />
+                                    <Image src="/sdg-12.png" alt="SDG 12" width={40} height={40} className="h-10 w-10" />
                                     <span>SDG #12: Responsible Consumption and Production. Our AI system guides accurate resource use, supporting responsible consumption.</span>
                                 </li>
                                 <li className="flex items-center space-x-3 text-xl text-gray-700">
-                                    <img src="/sdg-13.png" alt="SDG 13" className="h-10 w-10" />
+                                    <Image src="/sdg-13.png" alt="SDG 13" width={40} height={40} className="h-10 w-10" />
                                     <span>SDG #13: Climate Action. Our solar-powered weather station helps farmers prepare for climate action and resilience.</span>
                                 </li>
                             </ul>
@@ -214,18 +215,18 @@ const AboutPage = () => {
                 {/* 4. Our Products (Full-screen slide) */}
                 <div id="our-products" className="my-20">
                     <h4 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Products</h4>
-                    <div className="relative bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-16 mx-auto max-w-5xl"> {/* max-w-5xl for wider product section */}
+                    <div className="relative bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-16 mx-auto max-w-5xl">
                         {/* Product Image */}
                         <div className="md:w-1/2 flex justify-center">
-                            <img src={currentProduct.image} alt={currentProduct.alt} className="w-full h-auto object-contain rounded-xl shadow-md" />
+                            <Image src={currentProduct.image} alt={currentProduct.alt} width={500} height={500} className="w-full h-auto object-contain rounded-xl shadow-md" />
                         </div>
                         {/* Product Description */}
-                        <div className="md:w-1/2 p-4 text-center md:text-left relative flex flex-col justify-center">
-                            <div className="absolute top-0 right-0 -mr-16 -mt-8 hidden md:block z-0"> {/* z-index 0 to be behind text */}
-                                <img src={currentProduct.silhouetteImage} alt="Silhouette" className="w-32 h-32 opacity-20" />
+                        <div className="md:w-1/2 p-4 text-center md:text-left relative">
+                            <div className="absolute top-0 right-0 -mr-16 -mt-8 hidden md:block z-0">
+                                <Image src={currentProduct.silhouetteImage} alt="Silhouette" width={128} height={128} className="w-32 h-32 opacity-20" />
                                 <p className="mt-2 text-sm text-gray-500 max-w-[120px]">{currentProduct.silhouetteText}</p>
                             </div>
-                            <h5 className="text-3xl font-bold text-gray-800 mb-4 relative z-10">{currentProduct.title}</h5> {/* z-index 10 to be on top */}
+                            <h5 className="text-3xl font-bold text-gray-800 mb-4 relative z-10">{currentProduct.title}</h5>
                             <p className="text-xl text-gray-600 relative z-10">{currentProduct.description}</p>
                         </div>
                         
@@ -247,9 +248,8 @@ const AboutPage = () => {
                 <div id="our-people" className="my-20">
                     <h4 className="text-3xl font-bold text-gray-800 mb-6 text-center">Our Founding Team</h4>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                        {/* Profil Billy (kiri) */}
                         <div className="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
-                            <img src="/billy-foto.jpg" alt="Billy Natanael" className="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
+                            <Image src="/billy-foto.jpg" alt="Billy Natanael" width={128} height={128} className="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
                             <div className="text-center">
                                 <h5 className="text-2xl font-bold text-gray-900">Billy Natanael</h5>
                                 <p className="text-lg text-green-600 font-semibold">CFO</p>
@@ -258,9 +258,8 @@ const AboutPage = () => {
                                 </p>
                             </div>
                         </div>
-                        {/* Profil Dzaky (tengah) */}
                         <div className="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
-                            <img src="/dzaky-foto.jpg" alt="Muhammad Dzaky Alfarizti" className="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
+                            <Image src="/dzaky-foto.jpg" alt="Muhammad Dzaky Alfarizti" width={128} height={128} className="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
                             <div className="text-center">
                                 <h5 className="text-2xl font-bold text-gray-900">Muhammad Dzaky A.</h5>
                                 <p className="text-lg text-green-600 font-semibold">CEO</p>
@@ -269,9 +268,8 @@ const AboutPage = () => {
                                 </p>
                             </div>
                         </div>
-                        {/* Profil Ikbal (kanan) */}
                         <div className="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
-                            <img src="/iqbal-foto.jpg" alt="Muhammad Ikbal" className="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
+                            <Image src="/iqbal-foto.jpg" alt="Muhammad Ikbal" width={128} height={128} className="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
                             <div className="text-center">
                                 <h5 className="text-2xl font-bold text-gray-900">Muhammad Ikbal</h5>
                                 <p className="text-lg text-green-600 font-semibold">CMO</p>
@@ -316,9 +314,11 @@ const AboutPage = () => {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                                     {selectedMilestone.images.map((image, index) => (
                                         <div key={index} className="relative w-full aspect-video rounded-xl overflow-hidden shadow-md">
-                                            <img 
+                                            <Image 
                                                 src={image} 
                                                 alt={`Milestone ${selectedYear} Image ${index + 1}`} 
+                                                width={400} 
+                                                height={225} 
                                                 className="absolute inset-0 w-full h-full object-cover" 
                                             />
                                         </div>
@@ -354,62 +354,6 @@ const AboutPage = () => {
                         Milestones
                     </Link>
                 </div>
-            </div>
-
-            {/* Social Media Buttons (Fixed at bottom right) */}
-            <div className="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
-                <a 
-                    href="https://www.instagram.com/agrisync_id" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-pink-500 hover:bg-pink-600 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
-                    aria-label="Instagram"
-                >
-                    <FontAwesomeIcon icon={faInstagram} size="lg" />
-                </a>
-                <a 
-                    href="https://wa.me/6281234567890" // Ganti dengan nomor WhatsApp Anda
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
-                    aria-label="WhatsApp"
-                >
-                    <FontAwesomeIcon icon={faWhatsapp} size="lg" />
-                </a>
-                <a 
-                    href="https://www.facebook.com/agrisync_id" // Ganti dengan URL Facebook Anda
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
-                    aria-label="Facebook"
-                >
-                    <FontAwesomeIcon icon={faFacebookF} size="lg" />
-                </a>
-                <a 
-                    href="https://www.linkedin.com/company/agrisync" // Ganti dengan URL LinkedIn Anda
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-700 hover:bg-blue-800 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
-                    aria-label="LinkedIn"
-                >
-                    <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
-                </a>
-                <a 
-                    href="https://www.youtube.com/channel/agrisync_id" // Ganti dengan URL YouTube Anda
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
-                    aria-label="YouTube"
-                >
-                    <FontAwesomeIcon icon={faYoutube} size="lg" />
-                </a>
-                <a 
-                    href="mailto:info@agrisync.com" // Ganti dengan alamat email Anda
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700 hover:bg-gray-800 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
-                    aria-label="Email"
-                >
-                    <FontAwesomeIcon icon={faEnvelope} size="lg" />
-                </a>
             </div>
         </SimpleLayout>
     );
