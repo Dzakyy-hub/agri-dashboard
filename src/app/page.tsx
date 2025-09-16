@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -7,7 +8,7 @@ export default function HomePage() {
       {/* Header & Navigasi */}
       <div className="absolute top-0 w-full p-6 flex justify-between items-center bg-white shadow-md">
         <div className="flex items-center space-x-2">
-            <img src="/agrisync-logo.png" alt="AgriSync Logo" className="h-8 w-auto" />
+            <Image src="/agrisync-logo.png" alt="AgriSync Logo" width={32} height={32} className="h-8 w-auto" />
             <span className="font-bold text-lg text-gray-800">AgriSync <span className="text-sm font-normal text-gray-500 hidden md:inline-block">| Member of Zona Technology Solution</span></span>
         </div>
         <div className="flex items-center space-x-4">
@@ -34,7 +35,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="md:w-1/2 flex justify-center">
-            <img src="/agrisync-visual.jpg" alt="AgriSync Visual" className="w-full rounded-xl shadow-2xl" />
+            <Image src="/agrisync-visual.jpg" alt="AgriSync Visual" width={700} height={400} className="w-full rounded-xl shadow-2xl" />
         </div>
       </div>
     </main>
