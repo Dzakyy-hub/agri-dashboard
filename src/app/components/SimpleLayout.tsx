@@ -30,7 +30,7 @@ const SimpleLayout = ({ children }: { children: React.ReactNode }) => {
       {/* Social Media Buttons (Fixed at bottom right) */}
       <div className="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
         <a 
-            href="https://www.instagram.com/agrisync_id" 
+            href="https://www.instagram.com/agrisync.zts" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center justify-center w-12 h-12 rounded-full bg-pink-500 hover:bg-pink-600 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
@@ -39,7 +39,7 @@ const SimpleLayout = ({ children }: { children: React.ReactNode }) => {
             <FontAwesomeIcon icon={faInstagram} size="lg" />
         </a>
         <a 
-            href="https://wa.me/6281234567890" // Ganti dengan nomor WhatsApp Anda
+            href="https://wa.me/6285364694196" // Ganti dengan nomor WhatsApp Anda
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center justify-center w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
@@ -57,7 +57,7 @@ const SimpleLayout = ({ children }: { children: React.ReactNode }) => {
             <FontAwesomeIcon icon={faFacebookF} size="lg" />
         </a>
         <a 
-            href="https://www.linkedin.com/company/agrisync" // Ganti dengan URL LinkedIn Anda
+            href="https://www.linkedin.com/company/agri-sync-zts/" // Ganti dengan URL LinkedIn Anda
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-700 hover:bg-blue-800 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
