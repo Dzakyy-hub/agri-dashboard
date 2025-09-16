@@ -1,5 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faInstagram,
+    faWhatsapp,
+    faFacebookF,
+    faLinkedinIn,
+    faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const SimpleLayout = ({ children }) => {
   return (
@@ -17,8 +26,54 @@ const SimpleLayout = ({ children }) => {
       <main className="flex-1 p-8">
         {children}
       </main>
-    </div>
-  );
-};
 
-export default SimpleLayout;
+      {/* Social Media Buttons (Fixed at bottom right) */}
+      <div className="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
+        <a 
+            href="https://www.instagram.com/agrisync_id" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-pink-500 hover:bg-pink-600 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
+            aria-label="Instagram"
+        >
+            <FontAwesomeIcon icon={faInstagram} size="lg" />
+        </a>
+        <a 
+            href="https://wa.me/6281234567890" // Ganti dengan nomor WhatsApp Anda
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
+            aria-label="WhatsApp"
+        >
+            <FontAwesomeIcon icon={faWhatsapp} size="lg" />
+        </a>
+        <a 
+            href="https://www.facebook.com/agrisync_id" // Ganti dengan URL Facebook Anda
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
+            aria-label="Facebook"
+        >
+            <FontAwesomeIcon icon={faFacebookF} size="lg" />
+        </a>
+        <a 
+            href="https://www.linkedin.com/company/agrisync" // Ganti dengan URL LinkedIn Anda
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-700 hover:bg-blue-800 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
+            aria-label="LinkedIn"
+        >
+            <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+        </a>
+        <a 
+            href="https://www.youtube.com/channel/agrisync_id" // Ganti dengan URL YouTube Anda
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-lg transition-all duration-300 transform hover:scale-110"
+            aria-label="YouTube"
+        >
+            <FontAwesomeIcon icon={faYoutube} size="lg" />
+        </a>
+        <a 
+            href="mailto:info@agrisync.com" // Ganti dengan alamat email Anda
+            className="flex items-center justify

@@ -4,16 +4,6 @@ import SimpleLayout from '@/app/components/SimpleLayout';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faInstagram,
-    faWhatsapp,
-    faFacebookF,
-    faLinkedinIn,
-    faYoutube,
-} from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
 
 // Data produk
 const products = [
@@ -43,43 +33,37 @@ const products = [
     }
 ];
 
-// Data milestones dengan gambar
+// Data milestones tanpa gambar
 const milestonesData = [
     { 
         year: '2023', 
         q1: 'Q1-Q2: Accepted in PKM Funding, research and prototype development.', 
         q3: 'Q3-Q4: Prototype improvement, initial trials with farming communities.',
-
     },
     { 
         year: '2024', 
         q1: 'Q1-Q2: Continuation of PKM program, refinement of prototype.', 
         q3: 'Q3-Q4: Foundation for MVP, preparation for external funding.',
-    
     },
     { 
         year: '2025', 
         q1: 'Q1-Q2: Join Pertamina Seed & Scale, acceleration program begins.', 
         q3: 'Q3-Q4: Product standardization, collaboration with industrial partners, strengthening branding.',
-    
     },
     { 
         year: '2026', 
         q1: 'Q1-Q2: Expansion into regional markets.', 
         q3: 'Q3-Q4: Partnerships with government and private sector.',
-    
     },
     { 
         year: '2027', 
         q1: 'Q1-Q2: Scaling up towards sustainability.', 
         q3: 'Q3-Q4: Integration with national climate-smart agriculture programs.',
-    
     },
     { 
         year: '2028', 
         q1: 'Q1-Q2: Product and service diversification based on AI-HortiScape (carbon monitoring, green certification tools).', 
         q3: 'Q3-Q4: Global expansion and integration into the international carbon trading market.',
-    
     }
 ];
 
@@ -140,7 +124,7 @@ const AboutPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="md:order-2">
                             <p className="text-2xl text-gray-600 mb-4">
-                                We founded AgriSync to address critical challenges in the agricultural sector. Climate change, which leads to droughts and shifting rainfall patterns, along with the emergence of pests, has significantly lowered agricultural productivity. Furthermore, excessive use of fertilizers like Urea and NPK contributes to N2O gas emissions, accounting for 7.72% of the sector's greenhouse gas emissions.
+                                We founded AgriSync to address critical challenges in the agricultural sector. Climate change, which leads to droughts and shifting rainfall patterns, along with the emergence of pests, has significantly lowered agricultural productivity. Furthermore, excessive use of fertilizers like Urea and NPK contributes to N2O gas emissions, accounting for 7.72% of the sector&apos;s greenhouse gas emissions.
                             </p>
                             <p className="text-2xl text-gray-600">
                                 While technology offers a solution, 53.16% of Indonesian farmers still lack a solid understanding of agricultural technology as of 2023. AgriSync is here to bridge this gap by providing an affordable and user-friendly tech solution for all farmers. Our mission is to empower farmers with precision tools to boost yields and reduce environmental impact.
@@ -309,26 +293,9 @@ const AboutPage = () => {
                                 <h5 className="text-2xl font-bold text-gray-800 mb-2">Q3-Q4:</h5>
                                 <p className="text-xl text-gray-700">{selectedMilestone?.q3}</p>
                             </div>
-                            {/* Gambar di bawah deskripsi milestone */}
-                            {selectedMilestone?.images && selectedMilestone.images.length > 0 && (
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                                    {selectedMilestone.images.map((image, index) => (
-                                        <div key={index} className="relative w-full aspect-video rounded-xl overflow-hidden shadow-md">
-                                            <Image 
-                                                src={image} 
-                                                alt={`Milestone ${selectedYear} Image ${index + 1}`} 
-                                                width={400} 
-                                                height={225} 
-                                                className="absolute inset-0 w-full h-full object-cover" 
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
                         </div>
                     </div>
                 </div>
-
             </div>
 
             {/* Footer Navigation */}
