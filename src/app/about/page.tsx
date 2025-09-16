@@ -296,7 +296,6 @@ const AboutPage = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
 
             {/* Footer Navigation */}
