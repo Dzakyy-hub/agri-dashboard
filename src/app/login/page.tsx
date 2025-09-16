@@ -10,7 +10,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const router = useRouter();
 
-  const handleLogin = (e) => {
+  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (username.trim() !== '' && email.trim() !== '' && password.trim() !== '') {
       localStorage.setItem('agriUser', JSON.stringify({ name: username, email: email }));

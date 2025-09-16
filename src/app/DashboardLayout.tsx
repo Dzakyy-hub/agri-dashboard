@@ -4,7 +4,11 @@ import React from 'react';
 import Link from 'next/link';
 import { HomeIcon, BeakerIcon, MapIcon, VideoCameraIcon } from '@heroicons/react/24/solid';
 
-const DashboardLayout = ({ children }) => {
+interface DashboardLayoutProps {
+  children: React.ReactNode;
+}
+
+const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
