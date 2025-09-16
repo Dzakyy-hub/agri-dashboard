@@ -297,6 +297,7 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
+
             {/* Footer Navigation */}
             <div className="mt-12 text-center">
                 <h4 className="text-2xl font-semibold text-gray-800 mb-4">Explore More</h4>
