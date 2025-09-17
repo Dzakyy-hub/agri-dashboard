@@ -8,7 +8,7 @@ export default function HomePage() {
       {/* Header & Navigasi */}
       <div className="absolute top-0 w-full p-6 flex justify-between items-center bg-white shadow-md">
         <div className="flex items-center space-x-2">
-            <Image src="/agrisync-logo.png" alt="AgriSync Logo" width={32} height={32} className="h-8 w-auto" />
+            <Image src="/agrisync-logo.png" alt="AgriSync Logo" width={32} height={32} />
             <span className="font-bold text-lg text-gray-800">AgriSync <span className="text-sm font-normal text-gray-500 hidden md:inline-block">| Member of Zona Technology Solution</span></span>
         </div>
         <div className="flex items-center space-x-4">
