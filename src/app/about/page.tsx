@@ -107,14 +107,15 @@ const AboutPage = () => {
                 {/* 1. Video Profile */}
                 <div id="video-profile" className="my-10 mx-auto max-w-3xl">
                     <div className="relative w-full overflow-hidden rounded-xl shadow-lg" style={{ paddingTop: '56.25%' }}>
-                        <iframe
-                            className="absolute top-0 left-0 w-full h-full"
-                            src="https://youtu.be/d4FRslsrcgo?si=-OyZTT6aCgjHMlPB"
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
+                        <iframe 
+                        width="560" height="315" 
+                        src="https://www.youtube.com/embed/d4FRslsrcgo?si=ZNS_8gvUBEJePSI7" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
 
